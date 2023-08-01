@@ -21,9 +21,6 @@ jobs:
   release:
     docker:
       - image: cimg/node:18.12.1
-    environment:
-      GITHUB_TOKEN: $GH_TOKEN
-      NPM_TOKEN: $NPM_TOKEN
     steps:
       - checkout
       - restore_cache:
@@ -39,6 +36,8 @@ workflows:
     jobs:
       - test
       - release:
+          context:
+            - test-runner:npm-release
           requires:
             - test
           filters:
