@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: circleci/node:12.17.0
+      - image: circleci/node:11.5.0
     working_directory: ~/repo
     steps:
       - checkout
@@ -20,7 +20,7 @@ jobs:
 
   release:
     docker:
-      - image: cimg/node:18.12.1
+      - image: circleci/node:11.5.0
     steps:
       - checkout
       - restore_cache:

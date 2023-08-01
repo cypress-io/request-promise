@@ -54,5 +54,8 @@
     "@cypress/request": "^2.88",
     "rimraf": "~2.5.3",
     "run-sequence": "~1.2.2"
+  },
+  "resolutions": {
+    "chalk":  "~1.1.3"
   }
 }
