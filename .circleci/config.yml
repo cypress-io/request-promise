@@ -21,6 +21,8 @@ jobs:
   release:
     docker:
       - image: cimg/node:18.12.1
+    environment:
+      GITHUB_TOKEN: $GH_TOKEN
     steps:
       - checkout
       - restore_cache:
