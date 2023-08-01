@@ -23,6 +23,7 @@ jobs:
       - image: cimg/node:18.12.1
     environment:
       GITHUB_TOKEN: $GH_TOKEN
+      NPM_TOKEN: $NPM_TOKEN
     steps:
       - checkout
       - restore_cache:
